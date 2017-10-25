@@ -1,4 +1,4 @@
-Chef::Provider::Boxstarter.send(:include, BoxstarterLibrary::Helper)
+# Chef::Provider::Boxstarter.send(:include, BoxstarterLibrary::Helper)
 
 version = nil
 if node['boxstarter']['version']
