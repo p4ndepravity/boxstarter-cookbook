@@ -28,11 +28,11 @@ module BoxstarterLibrary
       #we will need to create a scheduled task for operations that do
       #not work remotely
       if($isRemote -and $creds){
-        Import-Module "$env:appdata/boxstarter/Boxstarter.Common/Boxstarter.Common.psd1"
+        Import-Module "$env:programdata/boxstarter/Boxstarter.Common/Boxstarter.Common.psd1"
         Create-BoxstarterTask $creds
       }
 
-      Import-Module "$env:appdata/boxstarter/Boxstarter.Chocolatey/Boxstarter.Chocolatey.psd1"
+      Import-Module "$env:programdata/boxstarter/Boxstarter.Chocolatey/Boxstarter.Chocolatey.psd1"
       $result = Install-BoxstarterPackage @params
 
       if($result.errors.count -gt 0) {
